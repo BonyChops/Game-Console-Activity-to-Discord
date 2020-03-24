@@ -66,6 +66,7 @@ Configuration
 
 Type number [0-2]?
 2
+Goodbye.
 ```
 You have to realise what is your IP address of your consoles.  
 If your console is Nintendo Switch, you can find it here  
