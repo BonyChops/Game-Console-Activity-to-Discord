@@ -5,7 +5,7 @@ import json
 import subprocess
 
 if not os.path.exists('config.json'):
-    print("First you have to run config.py(config.py) to config.\nPress enter to exit...")
+    print("First you have to run config.py(config.exe) to config.\nPress enter to exit...")
     gomi = input()
     exit()
 f = open("config.json", 'r')

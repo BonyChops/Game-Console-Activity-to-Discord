@@ -20,7 +20,7 @@ print("起動時にこのアプリを起動するよう設定します。よろ�
 print("Press enter to continue...")
 gomi = input()
 
-createShortCut(os.getcwd()+'start.exe','GameConsoleActivitytoDiscord')
+createShortCut(os.getcwd()+'/start.exe','GameConsoleActivitytoDiscord')
 print("Done!")
 print("Press enter to close...")
 gomi = input()
