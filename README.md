@@ -19,7 +19,7 @@ Such as...
 
 # Releases (Download)
 ### Build for windows  
-### [Releases](./releases)
+### [Releases](https://github.com/BonyChops/Game-Console-Activity-to-Discord/releases)
 
 # Pre-configure for Mac/Linux and other OS
 1. Install python3
