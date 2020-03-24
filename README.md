@@ -28,7 +28,20 @@ Such as...
 1. `pip install -r requirements.txt`  
 (If you want to use latest version of package, run  
 `pip install https://github.com/qwertyquerty/pypresence/archive/master.zip` )
-1. Done! Go on to the next section: [Setup for windows](#setup-for-windows) (and also for other os)
+1. [<span style="color: red; ">IMPORTANT</span>] This script is made for windows so you have to change a little bit.  
+Please modify `start.py` like this...  
+
+[start.py:24]  
+`... (["ping", "-w", "3", "`<span style="color: red; ">-n</span>`", "1", ...`  
+↓  
+`... (["ping", "-w", "3", "`<span style="color: green; ">-c</span>`", "1", ...`  
+[start.py:32]  
+`... (["ping", "-w", "3", "`<span style="color: red; ">-n</span>`", "1", ...`  
+↓  
+`... (["ping", "-w", "3", "`<span style="color: green; ">-c</span>`", "1", ...`  
+
+
+6. Done! Go on to the next section: [Setup for windows](#setup-for-windows) (and also for other os)
 
 # Setup for windows
 1. Run `config.exe` (`config.py`) to start configuration.
