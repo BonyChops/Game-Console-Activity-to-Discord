@@ -4,6 +4,8 @@ Share your ACTUAL game console activity on Discord!
 Check whether your game consoles on your local network is active or not and make it able to see it with your Discord's profile.  
 
 <div align="center">
+
+<img src="https://raw.githubusercontent.com/bonychops/Game-Console-Activity-to-Discord/img/status.png" alt="Profile" title="Profile"><br><br>
 <img src="https://raw.githubusercontent.com/bonychops/Game-Console-Activity-to-Discord/img/profile.png" alt="Profile" title="Profile">
 </div>
 
