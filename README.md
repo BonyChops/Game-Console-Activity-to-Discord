@@ -101,3 +101,6 @@ If your console is Nintendo Switch, you can find it here
 # Run app automatically when you booted up pc (Win only)
 Just run `automaticallyBoot.exe`  
 It don't require admin rights.
+
+# Package
+### [qwertyquerty/pypresence - Github](https://github.com/qwertyquerty/pypresence)
