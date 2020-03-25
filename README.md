@@ -82,4 +82,6 @@ Just run `automaticallyBoot.exe`
 It don't require admin rights.
 
 # Package
-### [qwertyquerty/pypresence - Github](https://github.com/qwertyquerty/pypresence)
+### qwertyquerty/pypresence - Github
+
+[![pypresence](https://img.shields.io/badge/using-pypresence-00bb88.svg?style=for-the-badge&logo=discord&logoWidth=20)](https://github.com/qwertyquerty/pypresence)
