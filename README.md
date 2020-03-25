@@ -26,13 +26,15 @@ Such as...
 ### [Releases](https://github.com/BonyChops/Game-Console-Activity-to-Discord/releases)
 
 # Pre-configure for Mac/Linux and other OS
+0. This app will work for OS which can use Python3 and Discord native app.
 1. Install python3
 1. Run `git clone https://github.com/BonyChops/Game-Console-Activity-to-Discord.git` to download this repository.
 1. `cd Game-Console-Activity-to-Discord`
 1. Run `pip3 install https://github.com/qwertyquerty/pypresence/archive/master.zip` to install package.
 1. Done! Go on to the next section: [Setup for windows](#setup-for-windows) (and also for other os)
 
-# Setup for windows
+# Setup for Windows (and other OS)
+0. If you are using not Windows, you have to do [this](#pre-configure-for-maclinux-and-other-os) first. 
 1. Run `config.exe` (`config.py`) to start configuration.
 1. Add your console infomation  
 Here is some example...
