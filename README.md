@@ -30,28 +30,7 @@ Such as...
 1. Run `git clone https://github.com/BonyChops/Game-Console-Activity-to-Discord.git` to download this repository.
 1. `cd Game-Console-Activity-to-Discord`
 1. Run `pip3 install https://github.com/qwertyquerty/pypresence/archive/master.zip` to install package.
-1. `IMPORTANT` This script is made for windows so you have to change a little bit.  
-Please modify `start.py` like this... Just change `-n` to `-c`.  
-
-[start.py:24]  
-```diff 
-- ... (["ping", "-w", "3", "-n", "1", ...
-```  
-↓  
-```diff
-+ ... (["ping", "-w", "3", "-c", "1", ...
-```  
-[start.py:32]  
-```diff 
-- ... (["ping", "-w", "3", "-n", "1", ...
-```  
-↓  
-```diff
-+ ... (["ping", "-w", "3", "-c", "1", ...
-```  
-
-
-6. Done! Go on to the next section: [Setup for windows](#setup-for-windows) (and also for other os)
+1. Done! Go on to the next section: [Setup for windows](#setup-for-windows) (and also for other os)
 
 # Setup for windows
 1. Run `config.exe` (`config.py`) to start configuration.

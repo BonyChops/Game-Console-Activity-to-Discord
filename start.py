@@ -21,7 +21,10 @@ while True:
     for consoles in config:
         client_id = client_ids[consoles['console']]
         custom = custom_names[consoles['console']]
-        ping = subprocess.Popen(["ping", "-w", "3", "-n", "1", consoles['ip']], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        if os.name == 'nt': #Windows
+            ping = subprocess.Popen(["ping", "-w", "3", "-n", "1", consoles['ip']], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        else:
+            ping = subprocess.Popen(["ping", "-w", "3", "-c", "1", consoles['ip']], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         time.sleep(1)
         returncode = ping.wait()
         if returncode == 0:
@@ -29,7 +32,10 @@ while True:
             connected = False
             dscCnt = 0
             while disConnected == False:
-                ping = subprocess.Popen(["ping", "-w", "3", "-n", "1", consoles['ip']], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+                if os.name == 'nt': #Windows
+                    ping = subprocess.Popen(["ping", "-w", "3", "-n", "1", consoles['ip']], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+                else:
+                    ping = subprocess.Popen(["ping", "-w", "3", "-c", "1", consoles['ip']], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)                    
                 returncode = ping.wait()
                 #print('ping returned {0}'.format(returncode))
                 #print(ping.stdout.read().decode('cp932'))
