@@ -29,9 +29,7 @@ Such as...
 1. Install python3
 1. Run `git clone https://github.com/BonyChops/Game-Console-Activity-to-Discord.git` to download this repository.
 1. `cd Game-Console-Activity-to-Discord`
-1. `pip install -r requirements.txt`  
-(If you want to use latest version of package, run  
-`pip install https://github.com/qwertyquerty/pypresence/archive/master.zip` )
+1. Run `pip3 install https://github.com/qwertyquerty/pypresence/archive/master.zip` to install package.
 1. `IMPORTANT` This script is made for windows so you have to change a little bit.  
 Please modify `start.py` like this... Just change `-n` to `-c`.  
 
