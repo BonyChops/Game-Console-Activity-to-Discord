@@ -17,6 +17,10 @@ Such as...
 - PS3
 - PS4
 
+# Easy Setup (Japanese)
+## Discordにゲーム機のステータスを出すアプリ作りました
+[![](https://img.youtube.com/vi/5yHuvOHLPRc/0.jpg)](https://www.youtube.com/watch?v=5yHuvOHLPRc)
+
 # Releases (Download)
 ### Build for windows  
 ### [Releases](https://github.com/BonyChops/Game-Console-Activity-to-Discord/releases)
@@ -28,17 +32,25 @@ Such as...
 1. `pip install -r requirements.txt`  
 (If you want to use latest version of package, run  
 `pip install https://github.com/qwertyquerty/pypresence/archive/master.zip` )
-1. [<span style="color: red; ">IMPORTANT</span>] This script is made for windows so you have to change a little bit.  
-Please modify `start.py` like this...  
+1. `IMPORTANT` This script is made for windows so you have to change a little bit.  
+Please modify `start.py` like this... Just change `-n` to `-c`.  
 
 [start.py:24]  
-`... (["ping", "-w", "3", "`<span style="color: red; ">-n</span>`", "1", ...`  
+```diff 
+- ... (["ping", "-w", "3", "-n", "1", ...
+```  
 ↓  
-`... (["ping", "-w", "3", "`<span style="color: green; ">-c</span>`", "1", ...`  
+```diff
++ ... (["ping", "-w", "3", "-c", "1", ...
+```  
 [start.py:32]  
-`... (["ping", "-w", "3", "`<span style="color: red; ">-n</span>`", "1", ...`  
+```diff 
+- ... (["ping", "-w", "3", "-n", "1", ...
+```  
 ↓  
-`... (["ping", "-w", "3", "`<span style="color: green; ">-c</span>`", "1", ...`  
+```diff
++ ... (["ping", "-w", "3", "-c", "1", ...
+```  
 
 
 6. Done! Go on to the next section: [Setup for windows](#setup-for-windows) (and also for other os)
@@ -88,6 +100,6 @@ If your console is Nintendo Switch, you can find it here
 3. Done! Easy-peasy!
 2. Run `start.exe` (`start.py`). It will change your Discord profile automatically.
 
-# Run app automatically when you booted up pc (Win)
+# Run app automatically when you booted up pc (Win only)
 Just run `automaticallyBoot.exe`  
 It don't require admin rights.
