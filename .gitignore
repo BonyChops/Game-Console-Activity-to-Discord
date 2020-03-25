@@ -1,2 +1,6 @@
 config.json
 bin/
+
+build
+dist
+*.spec
