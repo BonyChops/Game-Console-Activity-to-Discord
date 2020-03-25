@@ -1,4 +1,9 @@
 import os
+if os.name != "nt":
+    print("I'm sorry but this will work for Windows only...")
+    print("Press enter to close...")
+    gomi = input()
+    exit()
 import win32com.client
 
 def createShortCut(path,scFileName,icon=None):
@@ -14,6 +19,7 @@ def createShortCut(path,scFileName,icon=None):
     shCut.WorkingDirectory = 'C:/Users/'+os.getlogin()+'/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup'
 
     shCut.Save()
+
 
 print("Setup to run this app when you booted up this PC, Okay?")
 print("起動時にこのアプリを起動するよう設定します。よろしいですか？\n")
