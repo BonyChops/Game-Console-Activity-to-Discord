@@ -26,9 +26,9 @@ Discordであなたのゲーム機でのアクティビティを共有しよう�
 
 # セットアップガイド（動画）
 
-## Discordにゲーム機のステータスを出すアプリ作りました
+[![Setup Video](https://img.youtube.com/vi/5yHuvOHLPRc/0.jpg)](https://www.youtube.com/watch?v=5yHuvOHLPRc)
 
-[![](https://img.youtube.com/vi/5yHuvOHLPRc/0.jpg)](https://www.youtube.com/watch?v=5yHuvOHLPRc)
+[Discordにゲーム機のステータスを出すアプリ作りました - YouTube](https://www.youtube.com/watch?v=5yHuvOHLPRc)
 
 # セットアップ
 
