@@ -1,36 +1,37 @@
 import json
 import os
+
 config_json = []
 
-def deleteConsole():
+
+def delete_console():
     global config_json
-    
+
     cnt = 0
-    print('-' * 30)
+    print("-" * 30)
     for settings in config_json:
-        if settings['console'] == 4:
-            cname = settings['custom']
+        if settings["console"] == 4:
+            cname = settings["custom"]
         else:
-            cname = console_names[settings['console']]
-        print("[%d]%-15s IP %s" % (cnt,cname,settings['ip']))
+            cname = console_names[settings["console"]]
+        print("[%d]%-15s IP %s" % (cnt, cname, settings["ip"]))
         cnt += 1
-    print('-' * 30)
-    endCode = cnt
-    deleteNum = -1
-    while not 0 <= deleteNum <= endCode:
-        print("\nSelect console you want to delete (type [%d] to cancel)\nType number [0-%d]?" % (endCode,endCode))
-        deleteNum = int(input())
-    if deleteNum == endCode:
+    print("-" * 30)
+    end_code = cnt
+    delete_num = -1
+    while not 0 <= delete_num <= end_code:
+        print("\nSelect console you want to delete (type [%d] to cancel)\nType number [0-%d]?" % (end_code, end_code))
+        delete_num = int(input())
+    if delete_num == end_code:
         return
-    config_json.pop(deleteNum)
+    config_json.pop(delete_num)
     print("Deleted.")
 
 
-
-def addNewConsole():
+def add_new_console():
     console = 100
     while not 0 <= console <= 4:
-        print ("""
+        print("""
 Select your Game Console!
 [0] Nintendo Switch
 [1] Nintendo 3DS
@@ -40,34 +41,35 @@ Select your Game Console!
 
 Type number [0-4]?""")
         console = int(input())
-    jsonar = {'console' : console}
+    jsonar = {"console": console}
     if console == 4:
         print("Type your console name!")
-        jsonar.update({'custom':input()})
+        jsonar.update({"custom": input()})
     print("Type IP address of your console!")
-    jsonar.update({'ip':input()})
+    jsonar.update({"ip": input()})
     return jsonar
 
-if not os.path.exists('config.json'):
+
+if not os.path.exists("config.json"):
     config_json = []
 else:
-    f = open("config.json","r")
+    f = open("config.json", "r")
     config_json = json.load(f)
     f.close()
-console_names = ["Nintendo Switch","Nintendo 3DS","Play Station 3","Play Station 4"]
+console_names = ["Nintendo Switch", "Nintendo 3DS", "Play Station 3", "Play Station 4"]
 while True:
-    if config_json != []:
-        print('-' * 30)
+    if config_json:
+        print("-" * 30)
         for settings in config_json:
-            if settings['console'] == 4:
-                cname = settings['custom']
+            if settings["console"] == 4:
+                cname = settings["custom"]
             else:
-                cname = console_names[settings['console']]
-            print("[%-15s] IP %s" % (cname,settings['ip']))
-        print('-' * 30)
+                cname = console_names[settings["console"]]
+            print("[%-15s] IP %s" % (cname, settings["ip"]))
+        print("-" * 30)
     setting_option = 100
     while not 0 <= setting_option <= 2:
-        print ("""
+        print("""
 Configuration
 [0] Add new console
 [1] Delete console
@@ -80,24 +82,21 @@ Type number [0-2]?""")
         exit()
 
     if setting_option == 0:
-        eachArray = addNewConsole()
+        eachArray = add_new_console()
         config_json.append(eachArray)
-        fw = open('config.json','w')
-        json.dump(config_json,fw)
+        fw = open("config.json", "w")
+        json.dump(config_json, fw)
         fw.close()
-        print('Added!')
+        print("Added!")
 
     if setting_option == 1:
-        if config_json == []:
+        if not config_json:
             print("Nothing to delete!")
         else:
-            deleteConsole()
-            if config_json == []:
+            delete_console()
+            if not config_json:
                 os.remove("config.json")
             else:
-                fw = open('config.json','w')
-                json.dump(config_json,fw)
+                fw = open("config.json", "w")
+                json.dump(config_json, fw)
                 fw.close()
-
-
-
