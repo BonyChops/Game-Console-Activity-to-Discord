@@ -81,7 +81,7 @@ If your console is Nintendo Switch, you can find it here
 2. Run `start.exe` (`start.py`). It will change your Discord profile automatically.
 
 # Run app automatically when you booted up pc (Win only)
-Just run `automaticallyBoot.exe`  
+Just run `startup.exe`  
 It don't require admin rights.
 
 # Package
