@@ -1,6 +1,7 @@
 from pypresence import Presence
 import time
 import os
+import platform
 import json
 import subprocess
 
@@ -27,8 +28,9 @@ CONSOLE_NAMES = [
 
 
 def send_ping():
-    arg = "-n" if os.name == "nt" else "-c"
-    command = ["ping", "-w", "3", arg, "1", consoles["ip"]]
+    arg  = "-n" if platform.system() == "Windows" else "-c"
+    arg2 = "-W" if platform.system() == "Darwin" else "-w"
+    command = ["ping", arg2, "3", arg, "1", consoles["ip"]]
     return subprocess.Popen(
         command,
         stdout=subprocess.PIPE,
