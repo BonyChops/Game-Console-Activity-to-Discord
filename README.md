@@ -19,8 +19,10 @@ Such as...
 - PS4
 
 # Easy Setup (Japanese)
-## Discordにゲーム機のステータスを出すアプリ作りました
-[![](https://img.youtube.com/vi/5yHuvOHLPRc/0.jpg)](https://www.youtube.com/watch?v=5yHuvOHLPRc)
+
+[![Setup Video](https://img.youtube.com/vi/5yHuvOHLPRc/0.jpg)](https://www.youtube.com/watch?v=5yHuvOHLPRc)
+
+[Discordにゲーム機のステータスを出すアプリ作りました - YouTube](https://www.youtube.com/watch?v=5yHuvOHLPRc)
 
 # Releases (Download)
 ### Build for windows  
