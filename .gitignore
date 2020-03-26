@@ -5,3 +5,4 @@ dist
 *.spec
 __pycache__
 GameConsoleActivitytoDiscord
+GameConsoleActivitytoDiscord-win.zip
