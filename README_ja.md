@@ -1,4 +1,4 @@
-English｜Japanese
+[English](https://github.com/BonyChops/Game-Console-Activity-to-Discord)｜日本語 (Japanese)
 
 # Game Console Activity to Discord
 

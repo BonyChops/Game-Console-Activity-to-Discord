@@ -1,3 +1,4 @@
+English｜[日本語 (Japanese)](https://github.com/BonyChops/Game-Console-Activity-to-Discord/blob/master/README_ja.md)
 # Game Console Activity to Discord
 Share your ACTUAL game console activity on Discord!
 # Features
