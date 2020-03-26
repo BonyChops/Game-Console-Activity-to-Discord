@@ -32,11 +32,6 @@ while True:
             connected = False
             dscCnt = 0
             while disConnected == False:
-                if os.name == 'nt': #Windows
-                    ping = subprocess.Popen(["ping", "-w", "3", "-n", "1", consoles['ip']], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-                else:
-                    ping = subprocess.Popen(["ping", "-w", "3", "-c", "1", consoles['ip']], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)                    
-                returncode = ping.wait()
                 #print('ping returned {0}'.format(returncode))
                 #print(ping.stdout.read().decode('cp932'))
                 if returncode == 0:
@@ -57,13 +52,19 @@ while True:
                             RPC.update( start=time.time(),state=cname, large_image="others", large_text=cname)  # Set the presence)    
                         connected = True
                 else:
-                    if dscCnt == 2:
-                        if connected != False:
+                    if connected != False:
+                        if dscCnt == 2:
                             print("Device turned off.")
                             RPC.close()
                             connected = False
                             disConnected = True
-                    else:
-                        dscCnt += 1
-                        print("Connection lost... (",dscCnt," / 2 )")
+                        else:
+                            dscCnt += 1
+                            print("Connection lost... (",dscCnt," / 2 )")
                 time.sleep(5)
+                if os.name == 'nt': #Windows
+                    ping = subprocess.Popen(["ping", "-w", "3", "-n", "1", consoles['ip']], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+                else:
+                    ping = subprocess.Popen(["ping", "-w", "3", "-c", "1", consoles['ip']], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)                    
+                returncode = ping.wait()
+                
