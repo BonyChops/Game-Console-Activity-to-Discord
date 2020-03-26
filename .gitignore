@@ -1,6 +1,5 @@
 config.json
 bin/
-start.spec
-__pycache__/
-build/
-dist/
+build
+dist
+*.spec
