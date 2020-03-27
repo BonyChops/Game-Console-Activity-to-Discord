@@ -8,5 +8,14 @@
     "add_console": "あなたのゲーム機を選択してください！\n[0] Nintendo Switch\n[1] Nintendo 3DS\n[2] PS3\n[3] PS4\n[4] その他\n\n[0-4] から数字を入力してください。",
     "deleted": "削除しました。",
     "delete_console": "削除したいゲーム機を選択してください！ ([{}] を入力でキャンセル)\n[0-{}]から数字を入力してください。",
-    "set_config_first": "はじめに config.py(config.exe) を実行して設定してください。\nEnterを押して終了します..."
+    "set_config_first": "はじめに config.py(config.exe) を実行して設定してください。\nEnterを押して終了します...",
+    "connection_lost": "接続が切断されました... ( 再接続: {} / 2 )",
+    "turned_off": "機器がオフになりました。",
+    "turned_on": "あなたの {}[{}] の接続がオンになりました！楽しんで！",
+    "connected": "接続しました。",
+    "start": "サービスを開始しています...",
+    "win_only": "申し訳ありませんが、この機能はWindows以外では動作しません。\nEnterを押して終了します...",
+    "confirm_startup": "このコンピュータの起動時に自動的にプログラムが起動するように設定します。よろしいですか？\nEnterを押して続行します... ( Ctrl + C でキャンセル )\n",
+    "canceled": "キャンセルしました。",
+    "startup_done": "完了しました。\nEnterを押して終了します..."
 }

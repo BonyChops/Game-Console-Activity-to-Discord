@@ -8,5 +8,14 @@
     "add_console": "Select your Game Console!\n[0] Nintendo Switch\n[1] Nintendo 3DS\n[2] PS3\n[3] PS4\n[4] Others\n\nType number [0-4]?",
     "deleted": "Deleted.",
     "delete_console": "Select console you want to delete (type [{}] to cancel)\nType number [0-{}]?",
-    "set_config_first": "First you have to run config.py(config.exe) to config.\nPress enter to exit..."
+    "set_config_first": "First you have to run config.py(config.exe) to config.\nPress enter to exit...",
+    "connection_lost": "Connection lost... ( {} / 2 tried )",
+    "turned_off": "Device turned off.",
+    "turned_on": "Your {}[{}] turned on! Have fun!",
+    "connected": "Connected.",
+    "start": "Service starting...",
+    "win_only": "I'm sorry but this will work for Windows only...\nPress enter to close...",
+    "confirm_startup": "Setup to run this app when you booted up this PC, Okay?\nPress enter to continue... ( Ctrl + C to cancel )\n",
+    "canceled": "Canceled.",
+    "startup_done": "Done!\nPress enter to close..."
 }

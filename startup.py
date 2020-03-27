@@ -1,10 +1,24 @@
 import os
+import json
+
+
+if not os.path.exists("./lang/lang.txt"):
+    input("Can't find lang.txt file. You have to run config.py(config.exe) to config.\nPress enter to exit...")
+    exit()
+else:
+    with open("./lang/lang.txt", "r", encoding="utf-8") as f:
+        lang = f.read()
+
+
+message = {}
+with open(f'./lang/{lang}.json', "r", encoding="utf-8") as f:
+    message = json.load(f)
+
 
 if os.name != "nt":
-    print("I'm sorry but this will work for Windows only...")
-    print("Press enter to close...")
-    gomi = input()
+    input(message["win_only"])
     exit()
+
 
 import win32com.client
 
@@ -25,11 +39,11 @@ def create_short_cut(path, sc_file_name, icon=None):
 
     sh_cut.Save()
 
-
-print("Setup to run this app when you booted up this PC, Okay?")
-print("起動時にこのアプリを起動するよう設定します。よろしいですか？\n")
-input("Press enter to continue...")
+try:
+    input(message["confirm_startup"])
+except:
+    print(message["canceled"])
+    exit()
 
 create_short_cut(f"{os.getcwd()}/start.exe", "GameConsoleActivitytoDiscord")
-print("Done!")
-input("Press enter to close...")
+input(message["startup_done"])
