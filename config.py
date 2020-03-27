@@ -3,9 +3,28 @@ import os
 
 config_json = []
 
+# i18n
+LANG_LIST = ["en", "ja"]
+if not os.path.exists("./lang/lang.txt"):
+    lang = input("Which language? (English=en, 日本語=ja): ")
+    if not lang in LANG_LIST:
+        print("Invalid lang / 無効な言語です")
+        exit()
+    with open("./lang/lang.txt", "w", encoding="utf-8") as f:
+        f.write(lang)
+else:
+    with open("./lang/lang.txt", "r", encoding="utf-8") as f:
+        lang = f.read()
+
+
+message = {}
+with open(f'./lang/{lang}.json', "r", encoding="utf-8") as f:
+    message = json.load(f)
+
 
 def delete_console():
     global config_json
+    global message
 
     cnt = 0
     print("-" * 30)
@@ -20,32 +39,26 @@ def delete_console():
     end_code = cnt
     delete_num = -1
     while not 0 <= delete_num <= end_code:
-        print("\nSelect console you want to delete (type [%d] to cancel)\nType number [0-%d]?" % (end_code, end_code))
+        print(message["delete_console"].format(end_code, end_code))
         delete_num = int(input())
     if delete_num == end_code:
         return
     config_json.pop(delete_num)
-    print("Deleted.")
+    print(message["deleted"])
 
 
 def add_new_console():
+    global message
+
     console = 100
     while not 0 <= console <= 4:
-        print("""
-Select your Game Console!
-[0] Nintendo Switch
-[1] Nintendo 3DS
-[2] PS3
-[3] PS4
-[4] Others
-
-Type number [0-4]?""")
+        print(message["add_console"])
         console = int(input())
     jsonar = {"console": console}
     if console == 4:
-        print("Type your console name!")
+        print(message["type_console_name"])
         jsonar.update({"custom": input()})
-    print("Type IP address of your console!")
+    print(message["type_console_ip"])
     jsonar.update({"ip": input()})
     return jsonar
 
@@ -69,16 +82,10 @@ while True:
         print("-" * 30)
     setting_option = 100
     while not 0 <= setting_option <= 2:
-        print("""
-Configuration
-[0] Add new console
-[1] Delete console
-[2] Exit
-
-Type number [0-2]?""")
+        print(message["config_main_menu"])
         setting_option = int(input())
     if setting_option == 2:
-        print("Good bye")
+        print(message["goodby"])
         exit()
 
     if setting_option == 0:
@@ -87,11 +94,11 @@ Type number [0-2]?""")
         fw = open("config.json", "w")
         json.dump(config_json, fw)
         fw.close()
-        print("Added!")
+        print(message["added"])
 
     if setting_option == 1:
         if not config_json:
-            print("Nothing to delete!")
+            print(message["console_not_found"])
         else:
             delete_console()
             if not config_json:

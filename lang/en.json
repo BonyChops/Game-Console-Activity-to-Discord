@@ -1,0 +1,12 @@
+{
+    "config_main_menu": "Configuration\n[0] Add new console\n[1] Delete console\n[2] Exit\n\nType number [0-2]?",
+    "goodby": "Good bye",
+    "added": "Added!",
+    "console_not_found": "Nothing to delete!",
+    "type_console_name": "Type your console name!",
+    "type_console_ip": "Type IP address of your console!",
+    "add_console": "Select your Game Console!\n[0] Nintendo Switch\n[1] Nintendo 3DS\n[2] PS3\n[3] PS4\n[4] Others\n\nType number [0-4]?",
+    "deleted": "Deleted.",
+    "delete_console": "Select console you want to delete (type [{}] to cancel)\nType number [0-{}]?",
+    "set_config_first": "First you have to run config.py(config.exe) to config.\nPress enter to exit..."
+}
