@@ -6,8 +6,8 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-pypresence = "==3.3.2"
-pywin32 = "*"
+pypresence = "==3.0.0"
+pywin32 = "==227"
 
 [requires]
 python_version = "3.8"

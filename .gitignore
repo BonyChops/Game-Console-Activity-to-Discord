@@ -6,3 +6,5 @@ dist
 __pycache__
 GameConsoleActivitytoDiscord
 GameConsoleActivitytoDiscord-win.zip
+lang/lang.txt
+.vscode

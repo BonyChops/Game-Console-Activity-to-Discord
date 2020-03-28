@@ -47,7 +47,20 @@ except:
     exit()
 
 
-print("Service started...")
+if not os.path.exists("./lang/lang.txt"):
+    input("Can't find lang.txt file. You have to run config.py(config.exe) to config.\nPress enter to exit...")
+    exit()
+else:
+    with open("./lang/lang.txt", "r", encoding="utf-8") as f:
+        lang = f.read()
+
+
+message = {}
+with open(f'./lang/{lang}.json', "r", encoding="utf-8") as f:
+    message = json.load(f)
+
+
+print(message["start"])
 while True:
     for consoles in config:
         client_id = CLIENT_IDS[consoles["console"]]
@@ -64,14 +77,14 @@ while True:
                 # print(ping.stdout.read().decode("cp932"))
                 if return_node == 0:
                     if dscCnt != 0:
-                        print("Connected.")
+                        print(message["connected"])
                     dscCnt = 0
                     if consoles["console"] == 4:
                         cname = consoles["custom"]
                     else:
                         cname = CONSOLE_NAMES[consoles["console"]]
                     if not connected:
-                        print(f"Your {cname}[{consoles['ip']}] turned on! Have fun!")
+                        print(message["turned_on"].format(cname, consoles["ip"]))
                         RPC = Presence(client_id)
                         RPC.connect()  # Start the handshake loop
                         if 0 <= consoles["console"] <= 3:
@@ -84,13 +97,13 @@ while True:
                 else:
                     if connected:
                         if dscCnt == 2:
-                            print("Device turned off.")
+                            print(message["turned_off"])
                             RPC.close()
                             connected = False
                             disConnected = True
                         else:
                             dscCnt += 1
-                            print(f"Connection lost... ( {dscCnt} / 2 )")
+                            print(message["connection_lost"].format(dscCnt))
                 time.sleep(5)
                 ping = send_ping()
                 return_node = ping.wait()
