@@ -1,0 +1,2 @@
+pypresence==3.0.0
+pywin32==227

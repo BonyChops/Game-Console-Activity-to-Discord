@@ -48,7 +48,8 @@ Pythonを実行することでソフトウェアを動かすことができま�
 1. Gitをインストールする。
 1. `git clone https://github.com/BonyChops/Game-Console-Activity-to-Discord.git` を実行し、ソースをクローンする。
 1. `cd Game-Console-Activity-to-Discord`
-1. `pip3 install -r requirements.txt` を実行し、依存関係をインストールする。
+1. `pip3 install -r requirements.txt` を実行し、依存関係をインストールする。  
+(Windowsの場合は`pip3 install -r requirements-win.txt`を実行してください)
 1. `python3 config.py` を実行し、ゲーム機の設定を行う。
 1. `python3 start.py` を実行し、ソフトウェアを起動します。
 
