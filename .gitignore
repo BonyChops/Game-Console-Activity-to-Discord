@@ -5,6 +5,6 @@ dist
 *.spec
 __pycache__
 GameConsoleActivitytoDiscord
-GameConsoleActivitytoDiscord-win.zip
+*.zip
 lang/lang.txt
 .vscode
