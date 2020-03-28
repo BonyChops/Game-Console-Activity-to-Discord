@@ -87,6 +87,7 @@ while True:
                         print(message["turned_on"].format(cname, consoles["ip"]))
                         RPC = Presence(client_id)
                         RPC.connect()  # Start the handshake loop
+                        input("Connected")
                         if 0 <= consoles["console"] <= 3:
                             # Set the presence)
                             RPC.update(start=time.time(), large_image=custom, large_text=cname)
