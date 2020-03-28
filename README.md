@@ -43,6 +43,7 @@ Such as...
 1. Add your console infomation  
 Here is some example...
 ```
+Which language? (English=en, 日本語=ja): en
 Configuration
 [0] Add new console
 [1] Delete console

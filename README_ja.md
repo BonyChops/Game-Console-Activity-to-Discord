@@ -58,39 +58,40 @@ Pythonを実行することでソフトウェアを動かすことができま�
 Windowsの場合は`config.exe`を、Linux/MacOSの場合は`config.py`を実行し、設定を開始します。
 
 ```
-Configuration
-[0] Add new console
-[1] Delete console
-[2] Exit
-
-Type number [0-2]?
-0
+Which language? (English=en, 日本語=ja): ja
 ```
+言語を選択してください。
 
-0. ゲーム機の追加
-0. ゲーム機の削除
-0. 終了
+```
+設定
+[0] 新しいゲーム機の追加
+[1] ゲーム機の削除
+[2] 閉じる
+
+[0-2] から数字を入力してください。
+0 
+```
 
 から、行いたい動作を選択する
 
 ```
-Select your Game Console!
+あなたのゲーム機を選択してください！
 [0] Nintendo Switch
 [1] Nintendo 3DS
 [2] PS3
 [3] PS4
-[4] Others
+[4] その他
 
-Type number [0-4]?
+[0-4] から数字を入力してください。
 0
 ```
 
 追加するゲーム機を0-4で指定する。
 
 ```
-Type IP address of your console!
+あなたのゲーム機のIPアドレスを入力してください！
 192.168.1.30
-Added!
+追加しました。
 ------------------------------
 [Nintendo Switch] IP 192.168.1.30
 ------------------------------
@@ -100,14 +101,14 @@ IPの設定を行う
 （詳しくは[動画](#セットアップガイド動画)を確認してください）
 
 ```
-Configuration
-[0] Add new console
-[1] Delete console
-[2] Exit
+設定
+[0] 新しいゲーム機の追加
+[1] ゲーム機の削除
+[2] 閉じる
 
-Type number [0-2]?
+[0-2] から数字を入力してください。
 2
-Goodbye.
+グッバイ！
 ```
 
 2で終了
