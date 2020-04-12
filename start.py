@@ -4,6 +4,8 @@ import os
 import platform
 import json
 import subprocess
+if platform.system() == "Windows": import win32com.client
+
 
 CLIENT_IDS = [
     "691885764124082186",
@@ -39,24 +41,32 @@ def send_ping():
 
 
 config = {}
+if os.path.dirname(os.path.abspath(__file__)) == f"C:\\Users\\{os.getlogin()}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup":
+    sh_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "GameConsoleActivitytoDiscord.lnk")
+    wshell = win32com.client.Dispatch("WScript.Shell") # <COMObject WScript.Shell>
+    shortcut = wshell.CreateShortcut(sh_path)
+    dir_path = os.path.dirname(shortcut.TargetPath)
+else:
+    dir_path = os.path.dirname(os.path.abspath(__file__))
+    
 try:
-    with open("config.json", "r") as f:
+    with open(os.path.join(dir_path,"config.json"), "r") as f:
         config = json.load(f)
 except:
     input("First you have to run config.py(config.exe) to config.\nPress enter to exit...")
     exit()
 
 
-if not os.path.exists("./lang/lang.txt"):
+if not os.path.exists(os.path.join(dir_path,"./lang/lang.txt")):
     input("Can't find lang.txt file. You have to run config.py(config.exe) to config.\nPress enter to exit...")
     exit()
 else:
-    with open("./lang/lang.txt", "r", encoding="utf-8") as f:
+    with open(os.path.join(dir_path,"./lang/lang.txt"), "r", encoding="utf-8") as f:
         lang = f.read()
 
 
 message = {}
-with open(f'./lang/{lang}.json', "r", encoding="utf-8") as f:
+with open(os.path.join(dir_path,f'./lang/{lang}.json'), "r", encoding="utf-8") as f:
     message = json.load(f)
 
 
